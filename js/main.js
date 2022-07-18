@@ -10,7 +10,8 @@ const calearBtn = document.querySelector("#clear-btn");
 calckBtn.addEventListener("click", calckResult);
 calearBtn.addEventListener("click", clearForm);
 
-function calckResult() {
+function calckResult(e) {
+  e.preventDefault()
   if (
     averageFlow.value.length != 0 &&
     (distance.value.length != 0 ||
@@ -41,4 +42,5 @@ function calckResult() {
 }
 function clearForm() {
   document.querySelector("form").reset();
+  result.innerHTML = "";
 }
