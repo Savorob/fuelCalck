@@ -15,10 +15,16 @@
             <form action="#" class="form">
                 <h3 class="form__title">Калькулятор расхода топлива</h3>
                 <p>
-                    <input step="any" id="average-flow" type="number" class="form__input" placeholder="Расход л/100">
+                    <input step="any" id="average-flow" type="number" class="form__input" placeholder="Средний расход л/100">
                 </p>
                 <p>
                     <input id="distance" type="number" class="form__input" placeholder="Пройденное расстояние">
+                </p>
+                <p>
+                    <input id="distance-start" type="number" class="form__input" placeholder="Показание одометра на старте">
+                </p>
+                <p>
+                    <input id="distance-finish" type="number" class="form__input" placeholder="Показание одометра на финише">
                 </p>
                 <button id="calck-btn" class="form__btn-calck">Расчитать</button>
                 <button id="clear-btn" class="form__btn-clear">Очистить</button>
