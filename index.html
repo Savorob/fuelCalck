@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Калькулятор расхода топлива</title>
-    <link rel="shortcut icon" href="images/icon.png">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-    
+    <link rel="shortcut icon" href="images/icon.png" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
     <article class="container">
-        <div class="form-box">
-            <form action="#" class="form">
-                <h3 class="form__title">Калькулятор расхода топлива</h3>
-                <p>
-                    <input step="any" id="average-flow" type="number" class="form__input" placeholder="Средний расход л/100">
-                </p>
-                <p>
-                    <input id="distance" type="number" class="form__input" placeholder="Пройденное расстояние">
-                </p>
-                <p>
-                    <input id="distance-start" type="number" class="form__input" placeholder="Показание одометра на старте">
-                </p>
-                <p>
-                    <input id="distance-finish" type="number" class="form__input" placeholder="Показание одометра на финише">
-                </p>
-                <button id="calck-btn" class="form__btn-calck">Расчитать</button>
-                <button id="clear-btn" class="form__btn-clear">Очистить</button>
-                <p id="result" class="form__result"></p>
-            </form>
-        </div>
+      <div class="form-box">
+        <form action="#" class="form">
+          <h3 class="form__title">Калькулятор расхода топлива</h3>
+          <p>
+            <input
+              step="any"
+              id="average-flow"
+              type="number"
+              class="form__input"
+              placeholder="Средний расход л/100"
+            />
+          </p>
+          <p>
+            <input
+              id="distance"
+              type="number"
+              class="form__input"
+              placeholder="Пройденное расстояние"
+            />
+          </p>
+          <p>
+            <input
+              id="distance-start"
+              type="number"
+              class="form__input"
+              placeholder="Показание одометра на старте"
+            />
+          </p>
+          <p>
+            <input
+              id="distance-finish"
+              type="number"
+              class="form__input"
+              placeholder="Показание одометра на финише"
+            />
+          </p>
+          <button id="calck-btn" class="form__btn-calck">Расчитать</button>
+          <button id="clear-btn" class="form__btn-clear">Очистить</button>
+          <p id="result" class="form__result"></p>
+        </form>
+      </div>
     </article>
 
     <script src="js/main.min.js"></script>
-</body>
+  </body>
 </html>

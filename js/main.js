@@ -11,33 +11,40 @@ calckBtn.addEventListener("click", calckResult);
 calearBtn.addEventListener("click", clearForm);
 
 function calckResult(e) {
-  e.preventDefault()
-  if (
-    averageFlow.value.length != 0 &&
-    (distance.value.length != 0 ||
-      (distanceFinish.value.length != 0) & (distanceStart.value.length != 0))
-  ) {
-    if (distanceStart.value.length == 0 || distanceFinish.value.length == 0) {
-      result.innerHTML =
-        ((distance.value / 100) * averageFlow.value).toFixed(2) + " л";
-    } else if (
-      distanceStart.value.length != 0 &&
-      distanceFinish.value.length != 0
-    ) {
-      result.innerHTML =
-        (
-          ((distanceFinish.value - distanceStart.value) / 100) *
-          averageFlow.value
-        ).toFixed(2) + " л";
-    } else if (
-      (distanceStart.value.length == 0 || distanceFinish.value.length == 0) &&
-      distance.value.length != 0
-    ) {
-      result.innerHTML =
-        ((distance.value / 100) * averageFlow.value).toFixed(2) + " л";
+  e.preventDefault();
+  let distanceTotal = distanceFinish.value - distanceStart.value;
+  function formula() {
+    result.innerHTML =
+      ((distance.value / 100) * averageFlow.value).toFixed(2) + " л";
+  }
+
+  if (averageFlow.value != 0) {
+    //Если заполнено пройденое расстояние
+    if (distance.value != 0) {
+      //Если помимо пройденного расстояния указаны показания одометра
+      if ((distanceFinish.value && distanceStart.value) != 0) {
+        //Проверяем равно ли заполненное поле пройденного расстояния разнице показаний одометра
+        if (distance.value != distanceTotal) {
+          alert(
+            "Введенное пройденное расстояние не сходится с показаниями одометра!"
+          );
+        } else {
+          formula();
+        }
+      } else {
+        formula();
+      }
+    } else {
+      //Если не заполнено поле расстояния
+      if ((distanceFinish.value && distanceStart.value) != 0) {
+        distance.value = distanceTotal;
+        formula();
+      } else {
+        alert("Заполните показания одометра либо пройденное расстояние!");
+      }
     }
   } else {
-    alert("Заполните поля!");
+    alert("Введите средний расход");
   }
 }
 function clearForm() {
