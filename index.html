@@ -7,6 +7,14 @@
     <title>Калькулятор расхода топлива</title>
     <link rel="shortcut icon" href="images/icon.png" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <article class="container">
@@ -17,7 +25,7 @@
             <input
               step="any"
               id="average-flow"
-              type="number"
+              type="search"
               class="form__input"
               placeholder="Средний расход л/100"
             />
@@ -25,7 +33,7 @@
           <p>
             <input
               id="distance"
-              type="number"
+              type="search"
               class="form__input"
               placeholder="Пройденное расстояние"
             />
@@ -33,7 +41,7 @@
           <p>
             <input
               id="distance-start"
-              type="number"
+              type="search"
               class="form__input"
               placeholder="Показание одометра на старте"
             />
@@ -41,14 +49,16 @@
           <p>
             <input
               id="distance-finish"
-              type="number"
+              type="search"
               class="form__input"
               placeholder="Показание одометра на финише"
             />
           </p>
-          <button id="calck-btn" class="form__btn-calck">Расчитать</button>
-          <button id="clear-btn" class="form__btn-clear">Очистить</button>
-          <p id="result" class="form__result"></p>
+          <div id="result" class="form__result"></div>
+          <div class="form__btns">
+            <button id="calck-btn" class="form__btns-button">Расчитать</button>
+            <button id="clear-btn" class="form__btns-button">Очистить</button>
+          </div>
         </form>
       </div>
     </article>
